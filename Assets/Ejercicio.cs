@@ -10,11 +10,11 @@ public class Ejercicio : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (nombreAlumno == "" || anioAlumno < 1 || anioAlumno > 5)
+        if (nombreAlumno == "" && anioAlumno < 1 || nombreAlumno == "" && anioAlumno > 5)
         {
             Debug.Log("Error");
         }
-        else if (anioAlumno < 3)
+        else if (anioAlumno >= 1 && anioAlumno <= 5 && anioAlumno < 3)
         {
             Debug.Log("Error. Aún estás en el ciclo básico");
         }
@@ -23,19 +23,19 @@ public class Ejercicio : MonoBehaviour
             switch (orientacionAlumno)
             {
                 case 'T':
-                Debug.Log("Muchas gracias " + nombreAlumno);
-                break;
+                    Debug.Log("Muchas gracias " + nombreAlumno + "!");
+                    break;
                 case 'D':
-                    Debug.Log("Muchas gracias " + nombreAlumno);
+                    Debug.Log("Muchas gracias " + nombreAlumno + "!");
                     break;
                 case 'G':
-                    Debug.Log("Muchas gracias " + nombreAlumno);
+                    Debug.Log("Muchas gracias " + nombreAlumno + "!");
                     break;
                 case 'M':
-                    Debug.Log("Muchas gracias " + nombreAlumno);
+                    Debug.Log("Muchas gracias " + nombreAlumno + "!");
                     break;
                 case 'H':
-                    Debug.Log("Muchas gracias " + nombreAlumno);
+                    Debug.Log("Muchas gracias " + nombreAlumno + "!");
                     break;
                 default:
                     Debug.Log("Solo puede ingresar T, D, G, M o H");
